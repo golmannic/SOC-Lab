@@ -1,0 +1,324 @@
+[
+  {
+    "rule_id": "IMPOSSIBLE_TRAVEL",
+    "title": "Impossible travel between logins",
+    "score": 55,
+    "entity": "cust0002",
+    "first_seen": "2026-09-19T10:00:00Z",
+    "last_seen": "2026-09-19T10:25:00Z",
+    "mitre": [
+      "T1078"
+    ],
+    "evidence": {
+      "from": "Seattle (198.51.100.3)",
+      "to": "Bucharest (203.0.113.200)",
+      "distance_km": 9326,
+      "implied_kmh": 22381
+    },
+    "event_ids": [
+      "EVT-003690",
+      "EVT-003697"
+    ],
+    "severity": "medium"
+  },
+  {
+    "rule_id": "PASSWORD_SPRAY",
+    "title": "Password spraying from a single IP",
+    "score": 60,
+    "entity": "203.0.113.77",
+    "first_seen": "2026-09-20T04:00:00Z",
+    "last_seen": "2026-09-20T04:18:09Z",
+    "mitre": [
+      "T1110.003"
+    ],
+    "evidence": {
+      "distinct_accounts": 25,
+      "attempts": 25,
+      "geo": "Bucharest",
+      "user_agent": "python-requests/2.32.3"
+    },
+    "event_ids": [
+      "EVT-003849",
+      "EVT-003850",
+      "EVT-003851",
+      "EVT-003852",
+      "EVT-003853",
+      "EVT-003854",
+      "EVT-003855",
+      "EVT-003856",
+      "EVT-003857",
+      "EVT-003858",
+      "EVT-003859",
+      "EVT-003860",
+      "EVT-003861",
+      "EVT-003862",
+      "EVT-003863",
+      "EVT-003864",
+      "EVT-003865",
+      "EVT-003866",
+      "EVT-003867",
+      "EVT-003868",
+      "EVT-003869",
+      "EVT-003870",
+      "EVT-003871",
+      "EVT-003872",
+      "EVT-003873"
+    ],
+    "severity": "medium"
+  },
+  {
+    "rule_id": "STRUCTURING",
+    "title": "Cash deposits structured below CTR threshold",
+    "score": 70,
+    "entity": "cust0009",
+    "first_seen": "2026-09-22T10:55:00Z",
+    "last_seen": "2026-09-24T12:25:00Z",
+    "mitre": [],
+    "evidence": {
+      "deposits": 4,
+      "total": 37050,
+      "locations": [
+        "Branch-0",
+        "Branch-1",
+        "Branch-2",
+        "Branch-3"
+      ]
+    },
+    "event_ids": [
+      "EVT-004287",
+      "EVT-004348",
+      "EVT-004491",
+      "EVT-004687"
+    ],
+    "severity": "high"
+  },
+  {
+    "rule_id": "CARD_TESTING",
+    "title": "Card testing (micro-transactions)",
+    "score": 85,
+    "entity": "cust0044",
+    "first_seen": "2026-09-23T03:12:00Z",
+    "last_seen": "2026-09-23T03:20:17Z",
+    "mitre": [
+      "T1657"
+    ],
+    "evidence": {
+      "micro_txns": 9,
+      "merchants": 6,
+      "src_ip": "203.0.113.30",
+      "geo": "Sao Paulo",
+      "cash_out_purchase": 1349.99
+    },
+    "event_ids": [
+      "EVT-004423",
+      "EVT-004424",
+      "EVT-004425",
+      "EVT-004426",
+      "EVT-004427",
+      "EVT-004428",
+      "EVT-004429",
+      "EVT-004430",
+      "EVT-004431",
+      "EVT-004432"
+    ],
+    "severity": "critical"
+  },
+  {
+    "rule_id": "BRUTE_FORCE_SUCCESS",
+    "title": "Brute force followed by successful login",
+    "score": 75,
+    "entity": "cust0007",
+    "first_seen": "2026-09-25T02:10:00Z",
+    "last_seen": "2026-09-25T02:15:28Z",
+    "mitre": [
+      "T1110.001",
+      "T1078"
+    ],
+    "evidence": {
+      "src_ip": "203.0.113.10",
+      "failed_attempts": 14,
+      "geo": "Moscow",
+      "user_agent": "python-requests/2.32.3"
+    },
+    "event_ids": [
+      "EVT-004801",
+      "EVT-004802",
+      "EVT-004803",
+      "EVT-004804",
+      "EVT-004805",
+      "EVT-004806",
+      "EVT-004807",
+      "EVT-004808",
+      "EVT-004809",
+      "EVT-004810",
+      "EVT-004811",
+      "EVT-004812",
+      "EVT-004813",
+      "EVT-004814",
+      "EVT-004815"
+    ],
+    "severity": "high"
+  },
+  {
+    "rule_id": "NEW_PAYEE_HIGH_VALUE",
+    "title": "High-value transfer to a new payee",
+    "score": 65,
+    "entity": "cust0007",
+    "first_seen": "2026-09-25T02:23:28Z",
+    "last_seen": "2026-09-25T02:23:28Z",
+    "mitre": [
+      "T1657"
+    ],
+    "evidence": {
+      "payee": "EXT-PAYEE-5521",
+      "amount": 7850.0,
+      "avg_transfer": 521.03,
+      "channel": "web",
+      "src_ip": "203.0.113.10",
+      "geo": "Moscow"
+    },
+    "event_ids": [
+      "EVT-004816"
+    ],
+    "severity": "high"
+  },
+  {
+    "rule_id": "IMPOSSIBLE_TRAVEL",
+    "title": "Impossible travel between logins",
+    "score": 55,
+    "entity": "cust0004",
+    "first_seen": "2026-09-27T13:00:00Z",
+    "last_seen": "2026-09-27T13:45:00Z",
+    "mitre": [
+      "T1078"
+    ],
+    "evidence": {
+      "from": "Houston (198.51.100.5)",
+      "to": "Lagos (203.0.113.20)",
+      "distance_km": 10485,
+      "implied_kmh": 13980
+    },
+    "event_ids": [
+      "EVT-005273",
+      "EVT-005284"
+    ],
+    "severity": "medium"
+  },
+  {
+    "rule_id": "NEW_PAYEE_HIGH_VALUE",
+    "title": "High-value transfer to a new payee",
+    "score": 65,
+    "entity": "cust0004",
+    "first_seen": "2026-09-27T13:52:00Z",
+    "last_seen": "2026-09-27T13:52:00Z",
+    "mitre": [
+      "T1657"
+    ],
+    "evidence": {
+      "payee": "EXT-PAYEE-8830",
+      "amount": 4200.0,
+      "avg_transfer": 393.13,
+      "channel": "web",
+      "src_ip": "203.0.113.20",
+      "geo": "Lagos"
+    },
+    "event_ids": [
+      "EVT-005285"
+    ],
+    "severity": "high"
+  },
+  {
+    "rule_id": "MONEY_MULE_FANOUT",
+    "title": "Inbound funds rapidly fanned out (mule pattern)",
+    "score": 85,
+    "entity": "cust0034",
+    "first_seen": "2026-09-28T10:05:00Z",
+    "last_seen": "2026-09-28T11:26:00Z",
+    "mitre": [],
+    "evidence": {
+      "inbound": 24500.0,
+      "inbound_from": "WIRE-ORIG-77120",
+      "outbound_total": 23746.35,
+      "payees": 5,
+      "pct_moved": 97
+    },
+    "event_ids": [
+      "EVT-005437",
+      "EVT-005441",
+      "EVT-005446",
+      "EVT-005448",
+      "EVT-005450",
+      "EVT-005453"
+    ],
+    "severity": "critical"
+  },
+  {
+    "rule_id": "NEW_PAYEE_HIGH_VALUE",
+    "title": "High-value transfer to a new payee",
+    "score": 65,
+    "entity": "cust0034",
+    "first_seen": "2026-09-28T10:30:00Z",
+    "last_seen": "2026-09-28T10:30:00Z",
+    "mitre": [
+      "T1657"
+    ],
+    "evidence": {
+      "payee": "EXT-MULE-4400",
+      "amount": 4715.68,
+      "avg_transfer": 488.24,
+      "channel": "mobile",
+      "src_ip": "198.51.100.35",
+      "geo": "Houston"
+    },
+    "event_ids": [
+      "EVT-005441"
+    ],
+    "severity": "high"
+  },
+  {
+    "rule_id": "NEW_PAYEE_HIGH_VALUE",
+    "title": "High-value transfer to a new payee",
+    "score": 65,
+    "entity": "cust0034",
+    "first_seen": "2026-09-28T10:45:00Z",
+    "last_seen": "2026-09-28T10:45:00Z",
+    "mitre": [
+      "T1657"
+    ],
+    "evidence": {
+      "payee": "EXT-MULE-4401",
+      "amount": 4685.44,
+      "avg_transfer": 957.95,
+      "channel": "mobile",
+      "src_ip": "198.51.100.35",
+      "geo": "Houston"
+    },
+    "event_ids": [
+      "EVT-005446"
+    ],
+    "severity": "high"
+  },
+  {
+    "rule_id": "NEW_PAYEE_HIGH_VALUE",
+    "title": "High-value transfer to a new payee",
+    "score": 65,
+    "entity": "cust0034",
+    "first_seen": "2026-09-28T10:58:00Z",
+    "last_seen": "2026-09-28T10:58:00Z",
+    "mitre": [
+      "T1657"
+    ],
+    "evidence": {
+      "payee": "EXT-MULE-4402",
+      "amount": 4689.32,
+      "avg_transfer": 1330.7,
+      "channel": "mobile",
+      "src_ip": "198.51.100.35",
+      "geo": "Houston"
+    },
+    "event_ids": [
+      "EVT-005448"
+    ],
+    "severity": "high"
+  }
+]

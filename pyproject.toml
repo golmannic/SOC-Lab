@@ -1,7 +1,7 @@
 [project]
-name = "books"
+name = "soc-lab"
 version = "0.1.0"
-description = "Add your description here"
+description = "Simulated retail-bank SOC: synthetic telemetry, fraud and intrusion detections, alert correlation, and evaluation against ground truth."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 dependencies = []

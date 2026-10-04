@@ -120,7 +120,6 @@ soc_lab/
   __main__.py     CLI
 tests/            unit tests per rule + end-to-end regression across seeds
 sample_output/    example report (seed 42)
-archive/          earlier unrelated FastAPI course-registration exercise
 ```
 
 ## Ideas for extending
